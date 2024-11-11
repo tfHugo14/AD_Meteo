@@ -1,0 +1,40 @@
+{
+  "predConcello": {
+    "idConcello": 1,
+    "listaPredDiaConcello": [
+      {
+        "dataPredicion": "04/11/2024",
+        "nivelAviso": 1,
+        "tMax": 2,
+        "tMin": 3,
+        "uvMax": 4,
+        "ceo": {
+          "manha": 1,
+          "noite": 3,
+          "tarde": 2
+        },
+        "pchoiva": {
+          "manha": 4,
+          "noite": 6,
+          "tarde": 5
+        },
+        "tmaxFranxa": {
+          "manha": 7,
+          "noite": 9,
+          "tarde": 8
+        },
+        "tminFranxa": {
+          "manha": 10,
+          "noite": 12,
+          "tarde": 11
+        },
+        "vento": {
+          "manha": 13,
+          "noite": 15,
+          "tarde": 14
+        }
+      }
+    ],
+    "nome": "Vigo"
+  }
+}
