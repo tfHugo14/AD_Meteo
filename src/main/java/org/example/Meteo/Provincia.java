@@ -1,10 +1,16 @@
 package org.example.Meteo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Provincia {
     private String nombre;
     private List<Concello> concellos;
+
+    public Provincia(String nombre, List<Concello> concellos){
+        this.nombre = nombre;
+        this.concellos = concellos;
+    }
 
     public String getNombre() {
         return nombre;
@@ -25,8 +31,8 @@ public class Provincia {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(nombre);
-        concellos.forEach(c -> sb.append(c.toString()));
+        sb.append(nombre).append("\n");
+        concellos.forEach(c -> sb.append("\t").append(c.toString()).append("\n"));
 
         return sb.toString();
     }

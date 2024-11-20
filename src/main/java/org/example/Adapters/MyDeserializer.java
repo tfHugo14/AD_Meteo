@@ -4,6 +4,7 @@ import com.google.gson.*;
 import org.example.Meteo.*;
 
 import java.lang.reflect.Type;
+import java.net.MalformedURLException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -50,7 +51,11 @@ public class MyDeserializer implements JsonDeserializer<Prediccion> {
                     int valorManha = jsonObjectVarMeteo.getAsJsonPrimitive("manha").getAsInt();
                     int valorTarde = jsonObjectVarMeteo.getAsJsonPrimitive("tarde").getAsInt();
                     int valorNoche = jsonObjectVarMeteo.getAsJsonPrimitive("noite").getAsInt();
-                    VariableFranxa variableFranxa = new VariableFranxa(key, valorManha, valorTarde, valorNoche);
+
+                    VariableFranxa variableFranxa = null;
+                    try { variableFranxa = new VariableFranxa(key, valorManha, valorTarde, valorNoche);
+                    } catch (MalformedURLException e) { throw new RuntimeException(e); }
+
                     listaVariableFranxa.add(variableFranxa);
                 }
             }
